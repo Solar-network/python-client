@@ -9,7 +9,7 @@
 [![Latest Version](https://badgen.now.sh/github/release/ArkEcosystem/python-client)](https://github.com/ArkEcosystem/python-client/releases/latest)
 [![License: MIT](https://badgen.now.sh/badge/license/MIT/green)](https://opensource.org/licenses/MIT)
 
-> Lead Maintainer: [Brian Faust](https://github.com/faustbrian)
+
 
 ## Guide for contributing
 
