@@ -1,10 +1,8 @@
-# Ark Python - Client
+# Solar Python - Client
 
-<p align="center">
-    <img src="https://github.com/ArkEcosystem/python-client/blob/master/banner.png" />
-</p>
 
-> A simple Python API client for the Ark Blockchain.
+
+> A simple Python API client for the Solar Blockchain.
 
 [![Build Status](https://badgen.now.sh/circleci/github/ArkEcosystem/python-client)](https://circleci.com/gh/ArkEcosystem/python-client)
 [![Codecov](https://badgen.now.sh/codecov/c/github/arkecosystem/python-client)](https://codecov.io/gh/arkecosystem/python-client)
