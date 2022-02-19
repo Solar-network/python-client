@@ -28,12 +28,12 @@ extras_require = {
 setup_requires = ['pytest-runner'] if {'pytest', 'test', 'ptr'}.intersection(sys.argv) else []
 
 setuptools.setup(
-    name='arkecosystem-client',
-    description='A simple Python API client for the ARK Blockchain.',
+    name='solar-client',
+    description='A simple Python API client for the Solar Blockchain.',
     version='2.0.0',
     author='Ark Ecosystem',
-    author_email='info@client.io',
-    url='https://github.com/ArkEcosystem/python-client',
+    author_email='info@ark.io',
+    url='https://github.com/solar-network/python-client',
     packages=setuptools.find_packages(exclude=['tests', 'tests.*']),
     install_requires=requires,
     extras_require=extras_require,

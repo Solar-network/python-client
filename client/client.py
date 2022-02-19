@@ -11,7 +11,7 @@ class ArkClient(object):
 
     def __init__(self, hostname):
         """
-        :param string hostname: Node hostname. Examples: `http://127.0.0.1:4002` or
+        :param string hostname: Node hostname. Examples: `http://127.0.0.1:6002` or
             `http://my.domain.io/api/`. This is to allow people to server the api
             on whatever url they want.
         """
