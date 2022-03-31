@@ -12,4 +12,4 @@ This project exists thanks to all the people who [contribute](../../contributors
 
 ## License
 
-[MIT](LICENSE) © [ARK Ecosystem](https://ark.io)
+Please read the separate [LICENSE](LICENSE) file for details.
