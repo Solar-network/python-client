@@ -2,11 +2,11 @@
 import backoff
 import requests
 
-from client.exceptions import ArkHTTPException, ArkParameterException
+from client.exceptions import SolarHTTPException, SolarParameterException
 
 
 def giveup_handler(_):
-    raise ArkHTTPException
+    raise SolarHTTPException
 
 
 # This uses the full_jitter algorithm
@@ -48,11 +48,11 @@ class Connection(object):
 
     def _handle_response(self, response):
         if not response.content:
-            raise ArkHTTPException('No content in response', response=response)
+            raise SolarHTTPException('No content in response', response=response)
 
         body = response.json()
         if not response.ok:
-            raise ArkHTTPException(
+            raise SolarHTTPException(
                 '{} {} {} - {}'.format(
                     response.request.method,
                     response.status_code,

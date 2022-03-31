@@ -4,10 +4,10 @@ from importlib import import_module
 from pathlib import Path
 
 from client.connection import Connection
-from client.exceptions import ArkParameterException
+from client.exceptions import SolarParameterException
 from client.resource import Resource
 
-class ArkClient(object):
+class SolarClient(object):
 
     def __init__(self, hostname):
         """

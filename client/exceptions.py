@@ -1,13 +1,13 @@
 
-class ArkException(Exception):
+class SolarException(Exception):
     pass
 
 
-class ArkParameterException(ArkException):
+class SolarParameterException(SolarException):
     pass
 
 
-class ArkHTTPException(ArkException):
+class SolarHTTPException(SolarException):
 
     def __init__(self, *args, **kwargs):
         self.response = kwargs.pop('response', None)
