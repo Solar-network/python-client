@@ -7,7 +7,7 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-requires = ['requests', 'backoff', 'flatten_dict']
+requires = ["requests", "backoff", "flatten_dict"]
 
 tests_require = [
     "flake8==4.0.1",
@@ -25,21 +25,18 @@ tests_require = [
     "twine==3.8.0",
 ]
 
-extras_require = {
-    'test': tests_require,
-    'dev': requires + tests_require
-}
+extras_require = {"test": tests_require, "dev": requires + tests_require}
 
-setup_requires = ['pytest-runner'] if {'pytest', 'test', 'ptr'}.intersection(sys.argv) else []
+setup_requires = ["pytest-runner"] if {"pytest", "test", "ptr"}.intersection(sys.argv) else []
 
 setuptools.setup(
-    name='solar-client',
-    description='A simple Python API client for the Solar Blockchain.',
-    version='2.0.0',
-    author='Solar Network',
-    author_email='hello@solar.org',
-    url='https://github.com/solar-network/python-client',
-    packages=setuptools.find_packages(exclude=['tests', 'tests.*']),
+    name="solar-client",
+    description="A simple Python API client for the Solar Blockchain.",
+    version="2.0.0",
+    author="Solar Network",
+    author_email="hello@solar.org",
+    url="https://github.com/solar-network/python-client",
+    packages=setuptools.find_packages(exclude=["tests", "tests.*"]),
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=requires,

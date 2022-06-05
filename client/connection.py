@@ -1,8 +1,7 @@
-
 import backoff
 import requests
 
-from client.exceptions import SolarHTTPException, SolarParameterException
+from client.exceptions import SolarHTTPException
 
 
 def giveup_handler(_):
@@ -10,56 +9,53 @@ def giveup_handler(_):
 
 
 # This uses the full_jitter algorithm
-retry = backoff.on_exception(backoff.expo,
-                             requests.exceptions.RequestException,
-                             max_tries=3,
-                             on_giveup=giveup_handler)
+retry = backoff.on_exception(
+    backoff.expo, requests.exceptions.RequestException, max_tries=3, on_giveup=giveup_handler
+)
 
 
 class Session(requests.Session):
-
     def __init__(self, *args, **kwargs):
-        if 'hostname' in kwargs:
-            self.hostname = kwargs.pop('hostname')
+        if "hostname" in kwargs:
+            self.hostname = kwargs.pop("hostname")
         super().__init__(*args, **kwargs)
 
     @retry
     def send(self, request, **kwargs):
-        kwargs.update({
-            'timeout': (1, 5)
-        })
+        kwargs.update({"timeout": (1, 5)})
         return super().send(request, **kwargs)
 
     def prepare_request(self, request):
         if self.hostname is not None:
-            request.url = '{}/{}'.format(self.hostname, request.url)
+            request.url = "{}/{}".format(self.hostname, request.url)
         return super().prepare_request(request)
 
 
 class Connection(object):
-
     def __init__(self, hostname):
         self.hostname = hostname
         self.session = Session(hostname=self.hostname)
 
-        self.session.headers.update({
-            'Content-Type': 'application/json',
-        })
+        self.session.headers.update(
+            {
+                "Content-Type": "application/json",
+            }
+        )
 
     def _handle_response(self, response):
         if not response.content:
-            raise SolarHTTPException('No content in response', response=response)
+            raise SolarHTTPException("No content in response", response=response)
 
         body = response.json()
         if not response.ok:
             raise SolarHTTPException(
-                '{} {} {} - {}'.format(
+                "{} {} {} - {}".format(
                     response.request.method,
                     response.status_code,
                     response.request.url,
-                    body.get('error')
+                    body.get("error"),
                 ),
-                response=response
+                response=response,
             )
 
         return body

@@ -2,21 +2,20 @@ from client.resource import Resource
 
 
 class Node(Resource):
-
     def status(self):
-        return self.request_get('node/status')
+        return self.request_get("node/status")
 
     def syncing(self):
-        return self.request_get('node/syncing')
+        return self.request_get("node/syncing")
 
     def configuration(self):
-        return self.request_get('node/configuration')
+        return self.request_get("node/configuration")
 
     def crypto(self):
-        return self.request_get('node/configuration/crypto')
+        return self.request_get("node/configuration/crypto")
 
     def fees(self, days=None):
         params = {
-            'days': days,
+            "days": days,
         }
-        return self.request_get('node/fees', params)
+        return self.request_get("node/fees", params)

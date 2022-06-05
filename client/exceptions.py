@@ -1,4 +1,3 @@
-
 class SolarException(Exception):
     pass
 
@@ -8,7 +7,6 @@ class SolarParameterException(SolarException):
 
 
 class SolarHTTPException(SolarException):
-
     def __init__(self, *args, **kwargs):
-        self.response = kwargs.pop('response', None)
+        self.response = kwargs.pop("response", None)
         super().__init__(*args, **kwargs)
