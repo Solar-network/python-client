@@ -6,7 +6,12 @@ __pycache__/
 *.python-version
 *.eggs
 *.pytest_cache/
-coverage.xml
-.coverage
-.vs
+.cache/
+build/
+dist/
+*.egg-info
 .vscode
+.vs
+venv
+venv/
+pip-wheel-metadata/
