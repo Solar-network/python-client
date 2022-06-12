@@ -32,7 +32,7 @@ setup_requires = ["pytest-runner"] if {"pytest", "test", "ptr"}.intersection(sys
 setuptools.setup(
     name="solar-client",
     description="A simple Python API client for the Solar Blockchain.",
-    version="2.0.0",
+    version="3.0.0",
     author="Solar Network",
     author_email="hello@solar.org",
     url="https://github.com/solar-network/python-client",
