@@ -1,5 +1,5 @@
-from client.client import SolarClient
-from client.connection import Connection
+from solar_client.client import SolarClient
+from solar_client.connection import Connection
 
 
 def test_client_creation_calls_import_api(mocker):

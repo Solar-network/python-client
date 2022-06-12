@@ -2,8 +2,8 @@ import pytest
 import requests
 import responses
 
-from client.connection import Connection
-from client.exceptions import SolarHTTPException
+from solar_client.connection import Connection
+from solar_client.exceptions import SolarHTTPException
 
 
 def test_connection_creation_sets_default_session_headers_and_variables():

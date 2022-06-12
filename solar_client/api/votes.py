@@ -1,4 +1,4 @@
-from client.resource import Resource
+from solar_client.resource import Resource
 
 
 class Votes(Resource):

@@ -1,7 +1,7 @@
 import backoff
 import requests
 
-from client.exceptions import SolarHTTPException
+from solar_client.exceptions import SolarHTTPException
 
 
 def giveup_handler(_):
