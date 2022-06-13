@@ -12,16 +12,16 @@ class Delegates(Resource):
 
     def blocks(self, delegate_id, page=None, limit=100, orderBy=None):
         params = {
-            'page': page,
-            'limit': limit,
-            'orderBy': orderBy,
+            "page": page,
+            "limit": limit,
+            "orderBy": orderBy,
         }
         return self.request_get("delegates/{}/blocks".format(delegate_id), params)
 
     def voters(self, delegate_id, page=None, limit=100, orderBy=None):
         params = {
-            'page': page,
-            'limit': limit,
-            'orderBy': orderBy,
+            "page": page,
+            "limit": limit,
+            "orderBy": orderBy,
         }
         return self.request_get("delegates/{}/voters".format(delegate_id), params)
