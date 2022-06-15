@@ -3,8 +3,8 @@ import pkgutil
 from importlib import import_module
 from pathlib import Path
 
-from client.connection import Connection
-from client.resource import Resource
+from solar_client.connection import Connection
+from solar_client.resource import Resource
 
 
 class SolarClient(object):
