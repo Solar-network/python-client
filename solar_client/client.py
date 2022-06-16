@@ -23,7 +23,7 @@ class SolarClient(object):
         """
         modules = pkgutil.iter_modules([str(Path(__file__).parent / "api")])
         for _, name, _ in modules:
-            module = import_module("client.api.{}".format(name))
+            module = import_module("solar_client.api.{}".format(name))
             for attr in dir(module):
                 # If attr name is `Resource`, skip it as it's a class and also has a
                 # subclass of Resource
